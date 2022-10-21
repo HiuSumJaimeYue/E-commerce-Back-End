@@ -7,7 +7,7 @@ When you run this E-commerce Back End application, you can .
 
 The technologies I used in this project are Node.js and MySQL.
 
-Below are the links to the starter code repository, this repository and the video of demostration.
+Below are the links to the starter code repository, this repository and the video of demostration.          
 Starter code from https://github.com/coding-boot-camp/fantastic-umbrella         
 Github repository: https://github.com/HiuSumJaimeYue/E-commerce-Back-End           
 Video of demonstration: 
