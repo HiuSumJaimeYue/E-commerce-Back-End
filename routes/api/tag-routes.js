@@ -9,8 +9,7 @@ router.get('/', (req, res) => {
     include: [
       {
         model: Product,
-        attributes: ['id', 'product_name'],
-        through: "products",
+        through: ProductTag
       }
     ]
   })
@@ -19,7 +18,6 @@ router.get('/', (req, res) => {
       console.log(err);
       res.status(500).json(err);
     });
-  // be sure to include its associated Product data
 });
 
 router.get('/:id', (req, res) => {
@@ -27,7 +25,13 @@ router.get('/:id', (req, res) => {
   Tag.findOne({
     where: {
       id: req.params.id
-    }
+    },
+    include: [
+      {
+        model: Product,
+        through: ProductTag
+      }
+    ]
   })
     .then(dbTagData => {
       if (!dbTagData) {
@@ -40,7 +44,6 @@ router.get('/:id', (req, res) => {
       console.log(err);
       res.status(500).json(err);
     });
-  // be sure to include its associated Product data
 });
 
 router.post('/', (req, res) => {

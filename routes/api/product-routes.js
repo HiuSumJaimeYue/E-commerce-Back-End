@@ -9,13 +9,11 @@ router.get('/', (req, res) => {
   Product.findAll({
     include: [
       {
-        model: Category,
-        attributes: ['id', 'category_name']
+        model: Category
       },
       {
         model: Tag,
-        attributes: ['id', 'tag_name'],
-        through: "tags",
+        through: ProductTag
       }
     ]
   })
@@ -24,7 +22,6 @@ router.get('/', (req, res) => {
       console.log(err);
       res.status(500).json(err);
     });
-  //Tag data
 });
 
 // get one product
@@ -36,13 +33,11 @@ router.get('/:id', (req, res) => {
     },
     include: [
       {
-        model: Category,
-        attributes: ['id', 'category_name']
+        model: Category
       },
       {
         model: Tag,
-        attributes: ['id', 'tag_name'],
-        through: "tags",
+        through: ProductTag,
       }
     ]
   })
@@ -57,7 +52,6 @@ router.get('/:id', (req, res) => {
       console.log(err);
       res.status(500).json(err);
     });
-  // be sure to include its associated Category and Tag data
 });
 
 // create new product
@@ -67,7 +61,7 @@ router.post('/', (req, res) => {
       "product_name": "Basketball",
       "price": 200.00,
       "stock": 3,
-      "category_id": 1
+      "category_id": 1,
       "tagIds": [1, 2, 3, 4]
     }
   */
