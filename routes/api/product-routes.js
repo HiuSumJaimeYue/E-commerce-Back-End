@@ -11,6 +11,11 @@ router.get('/', (req, res) => {
       {
         model: Category,
         attributes: ['id', 'category_name']
+      },
+      {
+        model: Tag,
+        attributes: ['id', 'tag_name'],
+        through: "tags",
       }
     ]
   })
@@ -19,7 +24,7 @@ router.get('/', (req, res) => {
       console.log(err);
       res.status(500).json(err);
     });
-  // be sure to include its associated Category and Tag data
+  //Tag data
 });
 
 // get one product
@@ -33,6 +38,11 @@ router.get('/:id', (req, res) => {
       {
         model: Category,
         attributes: ['id', 'category_name']
+      },
+      {
+        model: Tag,
+        attributes: ['id', 'tag_name'],
+        through: "tags",
       }
     ]
   })
