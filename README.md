@@ -22,7 +22,7 @@ Video of demonstration: https://youtu.be/LrFeAt_odgs
 -[Questions](#questions)        
 
 ## Installation         
-If you are setting the project up in your local computer, run "npm i" in your terminal after downloading the files. Then, set up your .env file, an example of .env file is in the Tests Section. Run "mysql -u root" in your terminal if you did not set up a password for mysql. If you set a password for mysql, type "mysql -u root -p " in your terminal and enter your password. After the terminal showed "mysql>", type "source db/schema.sql". After seeing "Query OK, ...", type "quit" to get out of mysql. Next, type "npm run seeds". Finally, type "npm start". After seeing "Now listening" in the terminal, open Insomnia and start your changes.               
+If you are setting the project up in your local computer, run "npm i" in your terminal after downloading the files. Then, set up your .env file, an example of .env file is in the Tests Section. Run "mysql -u root" in your terminal if you did not set up a password for mysql. If you set a password for mysql, type "mysql -u root -p " in your terminal and enter your password. After the terminal showed "mysql>", type "source db/schema.sql". After seeing "Query OK, ...", type "quit" to get out of mysql. Next, type "npm run seeds". Finally, type "npm start". After seeing "Now listening" in the terminal, open Insomnia and start your changes.                
 
 ## Usage    
 You can read all the Categories, Products or Tags.                
