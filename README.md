@@ -22,10 +22,9 @@ Video of demonstration: https://youtu.be/LrFeAt_odgs
 -[Questions](#questions)        
 
 ## Installation         
-If you are setting the project up in your local computer, run "npm i" in your terminal after downloading the files. Then, set up your .env file, an example of .env file is in the Tests Section. Run "mysql -u root" in your terminal if you did not set up a password for mysql. If you set a password for mysql, type "mysql -u root -p " in your terminal and enter your password. After the terminal showed "mysql>", type "source db/db.sql". After seeing "Database changed", type "quit" to get out of mysql. Next, type "npm run seeds". Finally, type "npm start". Finally, open Insomnia to start your changes.               
+If you are setting the project up in your local computer, run "npm i" in your terminal after downloading the files. Then, set up your .env file, an example of .env file is in the Tests Section. Run "mysql -u root" in your terminal if you did not set up a password for mysql. If you set a password for mysql, type "mysql -u root -p " in your terminal and enter your password. After the terminal showed "mysql>", type "source db/schema.sql". After seeing "Query OK, ...", type "quit" to get out of mysql. Next, type "npm run seeds". Finally, type "npm start". After seeing "Now listening" in the terminal, open Insomnia and start your changes.               
 
 ## Usage    
-  
 You can read all the Categories, Products or Tags.                
 You can read or change or delete a single Category, Product or Tag using the Id at the end of the route.                           
 You can add a new Category, Product or Tag. 
@@ -44,8 +43,24 @@ DB_NAME='ecommerce_db'
 DB_USER='root'                  
 DB_PASSWORD=''          
 
-The following is an example of JSON that you can put in the body for 
+The following is an example of JSON that you can put in the body for creating a new Category.               
+`{
+  "category_name": "Food"
+}`
 
+The following is an example of JSON that you can put in the body for creating a new Product.               
+`{
+	"product_name": "Ball",
+  "price": 50.57,
+	"stock": 742,
+	"category_id": 4,
+  "tagIds": [4,5]
+}`
+
+The following is an example of JSON that you can put in the body for creating a new Tag.               
+`{
+	"tag_name": "NewTag"
+}`
 
 ## Questions         
 If you have any questions about the project, 
