@@ -26,9 +26,11 @@ If you are setting the project up in your local computer, run "npm i" in your te
 
 ## Usage    
 You can read all the Categories, Products or Tags.                
-You can read or change or delete a single Category, Product or Tag using the Id at the end of the route.                           
-You can add a new Category, Product or Tag. 
-An example of JSON that you can put in the body for creating a new Category, Product or Tag is in the Tests Section.               
+You can read or change or delete a single Category, Product or Tag using the Id at the end of the route.           
+An example of HTTP request URL for Category, Product or Tag is in the Tests Section, including an example for using the Id at the end of the route.                 
+You can also create a new Category, Product or Tag.         
+An example of JSON that you can put in the body for creating a new Category, Product or Tag is in the Tests Section.            
+
             
 ## License         
 &copy; 2022 by Hiu Sum Jaime Yue       
@@ -42,6 +44,14 @@ The following is an example of .env file.
 DB_NAME='ecommerce_db'          
 DB_USER='root'                  
 DB_PASSWORD=''          
+
+The following is an example of HTTP request URL for Category, Product or Tag respectively.              
+Category:  http://localhost:3001/api/categories                  
+Product: http://localhost:3001/api/products            
+Tag: http://localhost:3001/api/tags                 
+
+The following is an example of HTTP request URL for Category, Product or Tag using Id at the end of the route.          
+http://localhost:3001/api/categories/5
 
 The following is an example of JSON that you can put in the body for creating a new Category.               
 `{
