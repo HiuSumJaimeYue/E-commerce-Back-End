@@ -2,7 +2,7 @@
 
 ## Description       
 This is an E-commerce Back End application made by Hiu Sum Jaime Yue.         
-In this E-commerce Back End application application, it allows you to read, create, update and delete data of Category, Product or Tag.         
+In this E-commerce Back End application, it allows you to read, create, update and delete data of Category, Product or Tag.         
 When you run this E-commerce Back End application, you can open the API GET, POST, PUT and DELETE routes 
 of Category, Product or Tag.       
 
